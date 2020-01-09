@@ -6,7 +6,7 @@
 
 void MainWindow::processImageInformation(const QImage image, const std::vector<QRect> rects)
 {
-//    std::cerr << "processImageInformation\n";
+    std::cerr << "processImageInformation\n";
     ui->label_show_video->setPixmap(QPixmap::fromImage(image));
 }
 
