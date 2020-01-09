@@ -18,10 +18,13 @@ signals:
 
 public:
     explicit ThreadFaceCapture(QObject *parent = nullptr);
+    ~ThreadFaceCapture();
+    void stop();
 
 private:
     cv::VideoCapture cap;
     cv::CascadeClassifier faceCascade;
+    bool stop_flag;
 
 protected:
     void run();

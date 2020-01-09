@@ -4,8 +4,11 @@
 #include <QMainWindow>
 #include <QImage>
 #include <QRect>
-#include <threadfacecapture.h>
+#include <QCloseEvent>
 #include <opencv2/core/types.hpp>
+
+#include <threadfacecapture.h>
+#include <threadbaiduapi.h>
 
 namespace Ui {
 class MainWindow;
@@ -21,11 +24,12 @@ public slots:
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void closeEvent(QCloseEvent *event);
 
 private:
     Ui::MainWindow *ui;
     ThreadFaceCapture *threadFaceCapture;
-
+    ThreadBaiduAPI *threadBaiduAPI;
 };
 
 #endif // MAINWINDOW_H

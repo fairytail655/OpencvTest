@@ -27,17 +27,26 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
+        threadbaiduapi.cpp \
         threadfacecapture.cpp
 
 HEADERS += \
         mainwindow.h \
+        threadbaiduapi.h \
         threadfacecapture.h
 
 FORMS += \
         mainwindow.ui
 
+# opencv 依赖库和头文件
 INCLUDEPATH += D:/opencv/build/include
-LIBS += D:/opencv/build/x64/vc15/lib/opencv_world346d.lib
+LIBS += D:\opencv\build\x64\vc15\lib\opencv_world346d.lib
+# jsoncpp 依赖库和有文件
+INCLUDEPATH += C:\Users\26235\Documents\GitDocu\vcpkg\packages\jsoncpp_x86-windows\include
+LIBS += C:\Users\26235\Documents\GitDocu\vcpkg\packages\jsoncpp_x86-windows\lib\jsoncpp.lib
+# curl 依赖库和有文件
+INCLUDEPATH += C:\Users\26235\Documents\GitDocu\vcpkg\packages\curl_x86-windows\include
+LIBS += C:\Users\26235\Documents\GitDocu\vcpkg\packages\curl_x86-windows\lib\libcurl.lib
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
