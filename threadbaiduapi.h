@@ -2,7 +2,8 @@
 #define THREADBAIDUAPI_H
 
 #include <QThread>
-#include <curl/curl.h>
+
+#include <face.h>
 
 class ThreadBaiduAPI : public QThread
 {

@@ -41,12 +41,19 @@ FORMS += \
 # opencv 依赖库和头文件
 INCLUDEPATH += D:/opencv/build/include
 LIBS += D:\opencv\build\x64\vc15\lib\opencv_world346d.lib
-# jsoncpp 依赖库和有文件
+# jsoncpp 依赖库和头文件
 INCLUDEPATH += C:\Users\26235\Documents\GitDocu\vcpkg\packages\jsoncpp_x86-windows\include
 LIBS += C:\Users\26235\Documents\GitDocu\vcpkg\packages\jsoncpp_x86-windows\lib\jsoncpp.lib
-# curl 依赖库和有文件
+# curl 依赖库和头文件
 INCLUDEPATH += C:\Users\26235\Documents\GitDocu\vcpkg\packages\curl_x86-windows\include
 LIBS += C:\Users\26235\Documents\GitDocu\vcpkg\packages\curl_x86-windows\lib\libcurl.lib
+# openssl 依赖库和头文件
+INCLUDEPATH += C:\Users\26235\Documents\GitDocu\vcpkg\packages\openssl-windows_x86-windows\include
+LIBS += C:\Users\26235\Documents\GitDocu\vcpkg\packages\openssl-windows_x86-windows\lib\libeay32.lib
+LIBS += C:\Users\26235\Documents\GitDocu\vcpkg\packages\openssl-windows_x86-windows\lib\ssleay32.lib
+# baidu 头文件
+INCLUDEPATH += C:\Users\26235\Documents\GitDocu\baidu
+INCLUDEPATH += C:\Users\26235\Documents\GitDocu\baidu\base
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

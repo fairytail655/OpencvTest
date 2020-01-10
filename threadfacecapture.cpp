@@ -54,18 +54,17 @@ void ThreadFaceCapture::run()
         emit imageInformation(frame_qimage, detections_qrect);
     }
 
-    msg = QString("%1 -> %2 threadid:[%3]")
-                .arg(__FILE__)
-                .arg(__FUNCTION__)
-                .arg((int)currentThreadId());
-    qDebug() << msg;
-
     cap.release();
 }
 
 void ThreadFaceCapture::stop()
 {
     stop_flag = true;
+    QString msg = QString("%1 -> %2 threadid:[%3]")
+                .arg(__FILE__)
+                .arg(__FUNCTION__)
+                .arg((int)currentThreadId());
+    qDebug() << msg;
 }
 
 QImage ThreadFaceCapture::Mat2QImage(cv::Mat cvImg)
